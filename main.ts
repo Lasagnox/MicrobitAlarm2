@@ -25,6 +25,20 @@ dist = mesurerDistance()
 basic.forever(function () {
     d = mesurerDistance()
     if (Math.abs(d - dist) >= 2) {
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . # . .
+            . # . # .
+            # . . . #
+            `)
         bipbip()
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
     }
 })
